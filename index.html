@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QUACK | For Quick Hacks</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background:#F6F6F7;
+        color:#CCCCCC;
+        text-align: center;
+        padding:35vh 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="app">
+      <h1>QUACK</h1>
+      <span>FOR QUICK HACKS</span>
+      <!-- maybe mount things here -->
+    </div>
+    
+    <script src="https://npmcdn.com/babel-transform-in-browser@6.4.6/dist/btib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.18/riot+compiler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.5.1/redux.min.js"></script>
+    
+    <script type="text/es2015">
+      var listTools = () => { 
+        return {
+          requestLib: window.superagent ? 'window.superagent' : 'Fail',
+          viewLib: window.riot ? 'window.riot' : 'Fail',
+          stateLib: window.riot ? 'window.Redux' : 'Fail',
+          babel: 'Give scripts a type attribute of text/es2015',
+        }
+      }
+      console.log('TOOLKIT:', listTools())
+    </script>
+    
+  </body>
+</html>
